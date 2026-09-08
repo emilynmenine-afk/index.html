@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Blog</title>
 
     <style>
@@ -29,13 +30,18 @@
         main {
             background-color: #8B4513;
             color: #000000;
-            display: flex;
             max-width: 1200px;
             margin: 20px auto;
             padding: 20px;
-            gap: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Post: imagem de um lado e texto do outro */
+        .post {
+            display: flex;
+            align-items: flex-start;
+            gap: 25px;
         }
 
         /* Imagem */
@@ -44,6 +50,16 @@
             height: 220px;
             object-fit: cover;
             border-radius: 8px;
+        }
+
+        /* Área da escrita */
+        .conteudo {
+            flex: 1;
+        }
+
+        /* Título do artigo */
+        .conteudo h2 {
+            margin-top: 0;
         }
 
         /* Nome do autor */
@@ -81,23 +97,37 @@
     <main>
 
         <!-- Primeiro post -->
-        <div>
-            <img src="image.png">
+        <div class="post">
 
-            <h2>Meu perfume</h2>
-            <p class="artigo-autor">Por: Emilyn</p>
+            <!-- Imagem -->
+            <img src="image.png" alt="Imagem do perfume">
 
-            <button class="botao-curtida">
-                ❤️ <span>1</span>
-            </button>
+            <!-- Texto e botões -->
+            <div class="conteudo">
 
-            <button class="botao-curtida">
-                👍 <span>1</span>
-            </button>
-        </div>
+                <h2>Meu perfume</h2>
 
-        <!-- Segundo post -->
-       
+                <p class="artigo-autor">
+                    Por: Emilyn
+                </p>
+
+                <p>
+                    Este é o meu perfume de excelência.
+                    Um aroma elegante, marcante e nobre.
+                </p>
+
+                <!-- Botão coração -->
+                <button class="botao-curtida">
+                    ❤️ <span>0</span>
+                </button>
+
+                <!-- Botão curtida -->
+                <button class="botao-curtida">
+                    👍 <span>0</span>
+                </button>
+
+            </div>
+
         </div>
 
     </main>
